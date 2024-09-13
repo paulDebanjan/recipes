@@ -14,13 +14,14 @@ class RecipeDetail extends StatefulWidget {
 }
 
 class _RecipeDetailState extends State<RecipeDetail> {
-  @override
   int _slider_value = 1;
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(widget.recipe.label)),
-      body:SafeArea(child: Column(
+      body:SafeArea(
+          child: Column(
         children: [
           SizedBox(
             height: 300,
@@ -30,10 +31,6 @@ class _RecipeDetailState extends State<RecipeDetail> {
             )
           ),
           const SizedBox(height: 8),
-          Text(
-            widget.recipe.label,
-            style: const TextStyle(fontSize: 18)
-          ),
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.all(7.0),
